@@ -13,7 +13,7 @@
                     <div>
                         <template v-if="!field.sideLabel && field.name">
                             <h4 v-if="field.asHtml" v-html="field.name" @click="toggle"></h4>
-                            <h4 v-else :class="{'mb-2':field.message && !collapsed, 'clickable':field.collapsible}"
+                            <h4 v-else :class="{'mb-2 font-bold':field.message && !collapsed, 'clickable':field.collapsible}"
                                 @click="toggle">
                                 {{field.name}}
                                 <div class="collapsible-caret"
@@ -33,11 +33,7 @@
 </template>
 
 <script>
-    import {FormField} from 'laravel-nova'
-
     export default {
-        mixins: [FormField],
-
         props: ['resourceName', 'resourceId', 'field', 'context'],
 
         data() {

@@ -66,7 +66,7 @@ class Help extends Field
         'success' => 'bg-green-100 text-green-600',
         'info' => 'bg-sky-100 text-sky-600',
         'danger' => 'bg-red-100 text-red-600',
-        'warning' => 'bg-yellow-100 text-yellow-600',
+        'warning' => 'bg-yellow-100 text-gray-500',
     ];
 
     /**
@@ -302,7 +302,7 @@ class Help extends Field
      * @return array
      * @throws Exception
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         $this->validateCollapsible();
 
