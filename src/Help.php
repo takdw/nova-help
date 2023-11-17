@@ -63,10 +63,10 @@ class Help extends Field
      * @var array
      */
     public $types = [
-        'success' => 'bg-success-light text-success-dark',
-        'info' => 'bg-info-light text-info-dark',
-        'danger' => 'bg-danger-light text-danger-dark',
-        'warning' => 'bg-warning-light text-warning-dark',
+        'success' => 'bg-green-100 text-green-600',
+        'info' => 'bg-sky-100 text-sky-600',
+        'danger' => 'bg-red-100 text-red-600',
+        'warning' => 'bg-yellow-100 text-gray-500',
     ];
 
     /**
@@ -302,7 +302,7 @@ class Help extends Field
      * @return array
      * @throws Exception
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         $this->validateCollapsible();
 
